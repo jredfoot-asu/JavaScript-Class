@@ -43,4 +43,8 @@ to see how it changes the visualization!
 */
 
 // Your code here
-showCarpetArea(1, 1, 1);
+
+var inputLength = prompt('Enter the length of your space: ')
+var inputWidth = prompt('Enter the width of your space: ')
+var area = inputLength * inputWidth
+showCarpetArea(inputLength, inputWidth, area);
