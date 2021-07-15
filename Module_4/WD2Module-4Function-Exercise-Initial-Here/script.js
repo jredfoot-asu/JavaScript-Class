@@ -1,10 +1,13 @@
 // Write code to complete the initialHere function 👇
 function initialHere(firstName, middleName, lastName) {
 
-  // Store the each initial in a variable appending a period (e.g "S." for Susan) 
+  // Store the each initial in a variable appending a period (e.g "S." for Susan)
+  let firstInitial = firstName[0];
+  let middleInitial = middleName[0];
+  let lastInitial = lastName[0];
 
   // Log the name to the console in the format "Susan B. Anthony, S.B.A."
-  console.log();
+  console.log(firstInitial + '.'  + middleInitial +'.' + lastInitial);
 }
 
 
