@@ -12,5 +12,5 @@ function goofyCase(text) {
 
 let input = prompt("Enter some text")
 let result = goofyCase(input);
-
+    
 console.log(result)

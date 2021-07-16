@@ -21,3 +21,13 @@ function renderTTS(text) {
   // Speak the utterance
   synthesis.speak(utterance);
 }
+
+function encourage() {
+  //get the name and words of encouragement.
+  let name = document.getElementById('name').value;
+  let encouragement = document.getElementById('encouragement').value;
+  // Combine those into some text.
+  let message = `Hello ${name}, I have something I would like to tell you. ${encouragement} Have a nice day!`;
+  // Render text to the user.
+  renderTTS(message)
+}
