@@ -21,7 +21,26 @@ let spottedOwl = "wise";
 
 function checkIfPoisonous(animal) {
 	// Your logic here 👇
+	if (animal == 'poisonous'){
+		console.log("You probably shouldn't pet that one...");
+	} else if (animal == 'vicious' ) {
+		console.log("I wouldn't pet that one either!");
+	} else if (animal == 'adorable') {
+		console.log("Per that one immediately!")
+	} else {
+		console.log("Give them a pet!")
+	}
 	
 }
 
 // checkIfPoisonous()
+
+checkIfPoisonous(kitty);
+checkIfPoisonous(pufferfish);
+checkIfPoisonous(cockatiel);
+checkIfPoisonous(puppy);
+checkIfPoisonous(dartFrog);
+checkIfPoisonous(blueRingedOctopus);
+checkIfPoisonous(mountainLion);
+checkIfPoisonous(ant);
+checkIfPoisonous(spottedOwl);
