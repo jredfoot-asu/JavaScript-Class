@@ -10,14 +10,29 @@ body {
 input {
     height: 40px;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
 }
 
 textarea {
     width: 80%;
     height: 120px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
 }
 
 text-area::placeholder {
     text-align: center;
     line-height: 60px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.btn {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
 }
