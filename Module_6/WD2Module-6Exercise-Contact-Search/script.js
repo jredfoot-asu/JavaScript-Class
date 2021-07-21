@@ -9,3 +9,23 @@ let contacts = [
    "Carlton", "Daniels", "650-555-0175",
      "Patti",    "Dunn", "650-555-0139",
     "Andrea", "Flowers", "619-555-0164" ];
+
+  let input = prompt("Enter a first and last name:");
+  let name = input.split(" ");
+
+  for (let i = 0; i < contacts.length; i += 3) {
+    let firstName = contacts[i];
+    let lastName = contacts[i+1];
+    let phoneNumber = contacts[i+2];
+    console.log(firstName);
+    if (firstName != name[0]) {
+      continue;
+    }
+
+    console.log(lastName);
+    if (lastName != name[1]){
+      continue;
+    }
+    alert(firstName + " " + lastName + " " + phoneNumber);
+    break;
+  }

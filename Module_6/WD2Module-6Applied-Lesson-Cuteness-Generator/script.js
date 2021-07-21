@@ -21,6 +21,18 @@
  }
 
 // Get input from user 1-9.
+let num = 0;
+
+while (num < 1 || num > 9) {
+  num = prompt("How much cuteness do you want (1-9)?");
+}
 
 
 // Add cute images to the page.
+let count = 0;
+while (count < num) {
+  let source = 'http://placekitten.com/200/200?image=' + count;
+  addImageToPage(source, (count*.2) +"s");
+  console.log(count)
+  count++;
+}
