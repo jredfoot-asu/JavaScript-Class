@@ -9,3 +9,7 @@ console.log(flavors);
 (4) Log the number of items in the flavors array by using its length property. */
 
 // Your code below here.
+flavors.push('root beer');
+console.log(flavors);
+console.log(flavors[3]);
+console.log(flavors.length);
