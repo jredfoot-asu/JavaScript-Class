@@ -20,7 +20,11 @@
 
 */
 function getRandomIntInclusive(min, max) {
-}
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    console.log(Math.floor(Math.random() * (max - min + 1) + min));
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  }
 
 /* Write a function that handles the magic 8-ball being clicked. Here are the steps:
 
