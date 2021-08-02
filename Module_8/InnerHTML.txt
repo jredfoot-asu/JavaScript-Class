@@ -1,0 +1,31 @@
+In some cases, developers want a lot of flexibility to make changes to an HTML page from JavaScript.  Adding or removing classes allow us to change the style but not the structure of the DOM.  We can create and remove elements directly in the DOM but this can be tedious or even impractical for generating deeply nested or complex HTML structure.
+
+A convenient method for accessing and editing the content of DOM elements is through the use of the innerHTML property. As the name suggests, the property contains all of the content inside of the element's tags as a string.
+
+For example, if we have an element like the following in our HTML:
+
+<div id="tagline">It's a <strong>bold</strong> new way of doing your dishes!</div>
+
+and run this in our javascript console:
+
+document.getElementById("tagline").innerHTML
+
+then we see the following output:
+
+It's a <strong>bold</strong> new way of doing your dishes!
+
+As demonstrated above, the innerHTML property of an element contains everything within that element's tag as a string.  This includes not only text but also other tags.  If we accessed at the the innerHTML of the body tag, for example, we would get the entire HTML of our website as a string!
+
+The innerHTML property can also be modified like any other object property. For example, consider the following code snippet:
+
+let taglineContent = document.getElementById("tagline");
+
+taglineContent.innerHTML = "Never worry about a dirty plate ever again!";
+
+Running these lines will change the HTML content completely:
+
+<div id="tagline">Never worry about a dirty plate ever again!</div>
+
+As you can see, setting the innerHTML property of an element can be very powerful and lead to sweeping changes in the document!  It can be really convenient because we can write out HTML as a string in our Javascript code and turn that string into DOM elements just as if they had originally been part of our HTML. 
+
+We generally don't want to write large chunks of HTML in our JavaScript code, but for medium-sized snippets we need to add to the DOM, the innerHTML property can be very helpful.  Sometimes, we just need to add text and not HTML.  For that, you can look into the innerText (Links to an external site.) property which carries less risk of accidentally changing the structure of your page in an undesirable way from JavaScript.
