@@ -37,5 +37,10 @@ function getRandomIntInclusive(min, max) {
        same answer multiple times in a row 
        (loops could be required).
 */
+
 function answerQuestion() {
+  answers = ["It is certain.", "Most likely.", "Without a doubt.", "Ask again later.", "Cannot predict now.", "Don't count on it.", "My sources say no.", "Outlook not so good."];
+  i  = getRandomIntInclusive(0, answers.length - 1);
+  makeAnswerAppear(answers[i]);
+
 }

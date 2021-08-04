@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+  background-color: aqua;
+}
+
+.hidden {
+  display: none;
+}
+
+h1, h3, h6 {
+  text-align: center;
+  color: #545454;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+.center-input {
+  margin: auto;
+  display: block;
+  background-color: white;
+}
+
+#win-message {
+  text-align: center;
+  margin: auto;
+  padding: 5px;
+  color: #545454;
+  font-size: larger;
+}
+
+#guess {
+  background-color: #545454;
+  color: white;
+  display: block;
+  margin: 10px auto;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+#win-message button{
+  background-color: green;
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+}
+
+#lose-message {
+  text-align: center;
+  margin: auto;
+  padding: 5px;
+  color: #545454;
+  font-size: larger;
+}
+
+#lose-message button {
+  background-color: red;
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+}
