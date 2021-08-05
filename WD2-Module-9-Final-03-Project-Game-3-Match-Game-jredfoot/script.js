@@ -21,6 +21,7 @@ After the function call the parentElement should look like this:
 
 To accomplish this, the function is should create the new card element (i.e. .card), append it as a child to the parentElement (i.e. #card-container), and return the new card element.
 */
+<<<<<<< HEAD
 
 function appendNewCard(parentElement) {
   // Step 1: Make a variable for the card element. Assign it to a new div element.
@@ -42,6 +43,37 @@ function appendNewCard(parentElement) {
   return child
 }
 // appendNewCardTest();
+=======
+let parentElement = document.getElementById("card-container");
+
+function appendNewCard(parentElement) {
+  // Step 1: Make a variable for the card element. Assign it to a new div element.
+  let div = document.createElement("div");
+  let parent = document.getElementById("card-container");
+  let appliedDiv = parent.appendChild(div);
+
+
+  // Step 2: Add the "card" class to the card element.
+  appliedDiv.classList.add("card");
+  
+
+  // Step 3: Write the HTML for the children of the card element (card-down and card-up) as a normal string and assign it as the innerHTML of the card element.
+  // card = document.querySelector("#card");
+  // let cardDown = "<div class='card-down'>"
+  // let cardUp = "<div class='card-up'>"
+  // card.innerHTML = cardUp;
+  // card.innerHTML = cardDown;
+  let card = document.getElementsByClassName("card");
+  card.innerHTML = "<div class='card-up'></div>";
+  card.innerHTML = "<div class='card-down'></div>";
+  // Step 4: Append the card element to the parentElement, making the card element a "child".
+
+
+  // Step 5: Return the card element.
+  return card
+}
+appendNewCardTest();
+>>>>>>> 9051a185f01de14769985c30ab19bdcd248bdf36
 
 
 /***  shuffleCardImageClasses()
@@ -55,7 +87,10 @@ Returns an array with 12 randomly ordered image classes (i.e. image-X, where X i
 function shuffleCardImageClasses() {
   
   // Step 1: Initialize an array of 2 of each image class strings in-order (e.g. "image-1", "image-1", "image-2"...)
+<<<<<<< HEAD
   let images = ["image-1", "image-1", "image-2", "image-2", "image-3", "image-3", "image-4", "image-4", "image-5", "image-5", "image-6", "image-6"]
+=======
+>>>>>>> 9051a185f01de14769985c30ab19bdcd248bdf36
 
   /* Step 2: We're going to use a library to randomly "shuffle" the array we created. The library is called "underscore.js" because it uses an "_" charector as an object to contain helper methods.  Load underscore.js in your HTML via the CDN and then look at the "shuffle" method.  Note to ignore the "require" syntax as this is for non-browser environments (i.e. the var "_" will already be available to you from loading the CDN).
    
@@ -65,7 +100,10 @@ function shuffleCardImageClasses() {
    */
    
   // Step 3: Return the shuffled array of class names.
+<<<<<<< HEAD
   return _.shuffle(images)
+=======
+>>>>>>> 9051a185f01de14769985c30ab19bdcd248bdf36
 }
 // shuffleCardImageClassesTest();
 
@@ -84,6 +122,7 @@ Returns an array of card objects to track all the cards for the rest of our prog
 */
 function createCards(parentElement, shuffledImageClasses) {
   // Step 1: Make an empty array to hold our card objects.
+<<<<<<< HEAD
   let cards = [];
 
   // Step 2: Loop 12 times to create the 12 cards we need.
@@ -94,12 +133,21 @@ function createCards(parentElement, shuffledImageClasses) {
 
     // Step 2(b): Add an image class to the new card element, using shuffledImageClasses[i].
      newCard.classList.add(shuffleCardImageClasses()[i]);
+=======
+
+  // Step 2: Loop 12 times to create the 12 cards we need.
+
+    // Step 2(a): Use appendNewCard to create/append a new card and store the result in a variable.
+
+    // Step 2(b): Add an image class to the new card element, using shuffledImageClasses[i].
+>>>>>>> 9051a185f01de14769985c30ab19bdcd248bdf36
 
     /* Step 2(c): Create a new object representing this card. This should have properties for:
        "index" -- what iteration of the loop is this.
        "element" -- the dom element for the card
        "imageClass" -- the string of the image class on the card.
     */
+<<<<<<< HEAD
    let cardObject = new Object();
    cardObject.index = i;
    cardObject.element = "div";
@@ -113,6 +161,14 @@ function createCards(parentElement, shuffledImageClasses) {
 
 }
 createCardsTest();
+=======
+
+    // Step 2(d): Append the new card object to the array of card objects.
+
+  // Step 3: Return the array of 12 card objects.
+}
+// createCardsTest();
+>>>>>>> 9051a185f01de14769985c30ab19bdcd248bdf36
 
 
 /***  doCardsMatch
